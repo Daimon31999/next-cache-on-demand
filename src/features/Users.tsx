@@ -1,5 +1,5 @@
 import { revalidateUsers } from "@/lib/actions";
-import Button from "@/shared/Button";
+import UIButton from "@/shared/ui/UIButton";
 
 async function getUsers() {
   const endpoint = "https://661ac6b465444945d04e7a1a.mockapi.io/blog/users";
@@ -19,7 +19,7 @@ export default async function Users() {
       <form action={revalidateUsers}>
         <div className="flex justify-between items-start mb-6">
           <h2>Users</h2>
-          <Button text="Revalidate users" />
+          <UIButton text="Revalidate users" />
         </div>
 
         <div className="grid grid-cols-2 gap-2">

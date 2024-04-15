@@ -1,5 +1,5 @@
 import { revalidateTodos } from "@/lib/actions";
-import Button from "@/shared/Button";
+import UIButton from "@/shared/ui/UIButton";
 
 async function getTodos() {
   const endpoint = "https://661ac6b465444945d04e7a1a.mockapi.io/blog/todos";
@@ -19,7 +19,7 @@ export default async function Todos() {
       <form action={revalidateTodos}>
         <div className="flex justify-between items-start mb-6">
           <h2>Todos</h2>
-          <Button text="Revalidate todos" />
+          <UIButton text="Revalidate todos" />
         </div>
 
         {/* TODOS START */}
