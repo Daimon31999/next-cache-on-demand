@@ -8,14 +8,14 @@ type UILinkProps = LinkProps & {
 };
 
 export default function UILink(props: UILinkProps) {
-  const { label, className, ...other } = props;
+  const { label, className, isActive, ...other } = props;
   return (
     <Link
       {...other}
       className={cn(
         "hover:text-slate-950 text-slate-700 hover:underline",
         {
-          "px-3 py-2 font-semibold rounded-md border-2": props.isActive,
+          "px-3 py-2 font-semibold rounded-md border-2": isActive,
         },
         className
       )}
