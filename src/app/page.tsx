@@ -5,7 +5,7 @@ import { revalidateAll } from "@/lib/actions";
 import Container from "@/shared/components/Container";
 import UIButton from "@/shared/ui/UIButton";
 
-export default function Home() {
+export default async function Home() {
   return (
     <BaseLayout>
       <Container className="py-10">
