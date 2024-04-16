@@ -1,10 +1,10 @@
 "use client";
 
-import { toggleTodo } from "@/actions/todoActions";
 import UICheckbox from "@/shared/ui/UICheckbox";
 import { Todo } from "@prisma/client";
 import { FormEvent } from "react";
 import TodosActions from "./components/TodosActions";
+import { toggleTodo } from "@/lib/actions";
 
 export default function TodoItem({ todo }: { todo: Todo }) {
   const handleChange = async (e: FormEvent<HTMLInputElement>) => {

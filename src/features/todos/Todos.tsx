@@ -1,9 +1,10 @@
-import { createTodo } from "@/actions/todoActions";
 import UIForm from "@/shared/ui/UIForm";
 import UIInput from "@/shared/ui/UIInput";
 import TodoItem from "./TodoItem";
 import { Todo } from "@prisma/client";
 import { SubmitBtn } from "./components/SubmitBtn";
+import { createTodo } from "@/lib/actions";
+import { useOptimistic } from "react";
 
 export default function Todos({ todos }: { todos: Todo[] }) {
   return (
