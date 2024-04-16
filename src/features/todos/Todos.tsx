@@ -1,3 +1,5 @@
+"use client";
+
 import UIForm from "@/shared/ui/UIForm";
 import UIInput from "@/shared/ui/UIInput";
 import TodoItem from "./TodoItem";
@@ -7,9 +9,31 @@ import { createTodo } from "@/lib/actions";
 import { useOptimistic } from "react";
 
 export default function Todos({ todos }: { todos: Todo[] }) {
+  const [optimisticTodos, addOptimisticTodo] = useOptimistic(
+    todos,
+    (state, newTodo: Todo) => {
+      return [...state, newTodo];
+    }
+  );
+
+  async function action(data: FormData) {
+    const input = data.get("input") as string;
+
+    const newTodo = {
+      id: Math.random(),
+      title: input,
+      completed: false,
+      createdAt: new Date(),
+    };
+
+    addOptimisticTodo(newTodo);
+
+    await createTodo(data);
+  }
+
   return (
     <>
-      <UIForm action={createTodo}>
+      <UIForm action={action}>
         <div className="flex gap-1">
           <UIInput placeholder="Add a new todo" name="input" />
           <SubmitBtn />
@@ -28,7 +52,7 @@ export default function Todos({ todos }: { todos: Todo[] }) {
             </span>{" "}
           </p>
         )}
-        {todos.map((todo) => (
+        {optimisticTodos.map((todo) => (
           <TodoItem key={todo.id} todo={todo} />
         ))}
       </section>

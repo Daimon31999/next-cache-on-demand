@@ -25,7 +25,7 @@ export async function createTodo(formData: FormData) {
       return;
     }
 
-    await sleep(1000);
+    await sleep(10000);
 
     await prisma.todo.create({
       data: {
