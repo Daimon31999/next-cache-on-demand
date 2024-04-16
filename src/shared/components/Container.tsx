@@ -1,5 +1,5 @@
-import { cn } from "@/lib/utils";
 import type { PropsWithChildren } from "react";
+import { cn } from "../lib/utils";
 
 type ContainerProps = PropsWithChildren & {
   className?: string;
@@ -16,7 +16,7 @@ export default function Container({
   return (
     <div
       className={cn(
-        "mx-auto px-3 transition-all md:px-20",
+        "mx-auto px-3 transition-all sm:px-10 md:px-44",
         {
           "xl:max-w-screen-xl": sz === "M",
           "xl:max-w-screen-xxl": sz === "L",

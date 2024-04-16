@@ -1,6 +1,5 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import UILink from "../ui/UILink";
 import Container from "./Container";
 import { usePathname } from "next/navigation";
@@ -16,11 +15,7 @@ export default function Header() {
           label="On-demand Revalidation"
           isActive={pathname === "/"}
         />
-        <UILink
-          href="/cache-todos"
-          label="React cache todos app"
-          isActive={pathname === "/cache-todos"}
-        />
+        <UILink href="/todos" label="Todos" isActive={pathname === "/todos"} />
       </Container>
     </header>
   );

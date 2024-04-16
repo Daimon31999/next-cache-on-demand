@@ -1,5 +1,6 @@
 import { FormEvent } from "react";
 import { nanoid } from "nanoid";
+import { cn } from "../lib/utils";
 
 type Props = {
   checked?: boolean;
@@ -42,7 +43,10 @@ export default function UICheckbox({ checked, onChange, label }: Props) {
         </span>
       </label>
       <label
-        className="mt-px font-light text-gray-700 cursor-pointer select-none"
+        className={cn(
+          "mt-px font-light text-gray-700 cursor-pointer select-none",
+          { "line-through": checked }
+        )}
         htmlFor={id}
       >
         {label}

@@ -4,8 +4,9 @@ import { deleteTodo, toggleTodo } from "@/actions/todoActions";
 import UICheckbox from "@/shared/ui/UICheckbox";
 import { Todo } from "@prisma/client";
 import { FormEvent } from "react";
+import TodosActions from "./components/TodosActions";
 
-export default function ToggleTodo({ todo }: { todo: Todo }) {
+export default function TodoItem({ todo }: { todo: Todo }) {
   const handleChange = async (e: FormEvent<HTMLInputElement>) => {
     e.preventDefault();
     e.currentTarget.form?.requestSubmit();
@@ -28,17 +29,7 @@ export default function ToggleTodo({ todo }: { todo: Todo }) {
           />
         </div>
       </form>
-      <form action={deleteTodo}>
-        <input
-          name="inputId"
-          value={todo.id}
-          className="border-gray-700 border"
-          type="hidden"
-        />
-        <button className="flex justify-center items-center text-white bg-red-500 rounded w-5 h-5">
-          x
-        </button>
-      </form>
+      <TodosActions id={todo.id} title={todo.title} />
     </div>
   );
 }
