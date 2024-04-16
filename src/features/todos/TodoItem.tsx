@@ -1,6 +1,6 @@
 "use client";
 
-import { deleteTodo, toggleTodo } from "@/actions/todoActions";
+import { toggleTodo } from "@/actions/todoActions";
 import UICheckbox from "@/shared/ui/UICheckbox";
 import { Todo } from "@prisma/client";
 import { FormEvent } from "react";

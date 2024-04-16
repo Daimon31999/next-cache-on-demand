@@ -1,6 +1,6 @@
 "use client";
 
-import { deleteTodo, editTodo, getTodos } from "@/actions/todoActions";
+import { deleteTodo, editTodo } from "@/actions/todoActions";
 import UIButton from "@/shared/ui/UIButton";
 import UIForm from "@/shared/ui/UIForm";
 import UIInput from "@/shared/ui/UIInput";

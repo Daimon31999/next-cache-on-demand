@@ -8,3 +8,6 @@ const customMerge = extendTailwindMerge({
 
 export const cn = (...className: ClassValue[]) =>
   customMerge(clsx(...className));
+
+export const sleep = (ms: number) =>
+  new Promise((resolve) => setTimeout(resolve, ms));
