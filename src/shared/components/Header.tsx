@@ -9,13 +9,23 @@ export default function Header() {
 
   return (
     <header>
-      <Container className="flex transition-all pt-10 h-full w-full items-center justify-center gap-4 lg:gap-8">
+      <Container className="flex overflow-x-scroll hide-scroll transition-all pt-10 h-full w-full items-center justify-center gap-4 lg:gap-8">
         <UILink
           href="/"
           label="On-demand Revalidation"
           isActive={pathname === "/"}
         />
-        <UILink href="/todos" label="Todos" isActive={pathname === "/todos"} />
+        <UILink
+          href="/todos"
+          label="Optimistic Todos"
+          isActive={pathname === "/todos"}
+        />
+
+        <UILink
+          href="/todos"
+          label="Dynamic catch all routes"
+          isActive={pathname === "/catch-all/[[...slug]]"}
+        />
       </Container>
     </header>
   );
