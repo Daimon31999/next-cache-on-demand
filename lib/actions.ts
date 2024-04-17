@@ -68,6 +68,7 @@ export async function getTodos() {
     return { todos };
   } catch (error) {
     console.log(error);
+    return { error };
   }
 }
 

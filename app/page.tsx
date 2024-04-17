@@ -17,9 +17,7 @@ export default async function Home() {
       <Container className="py-10">
         <section className="mb-10">
           <form action={revalidateAll}>
-            <h1 className="text-2xl font-bold py-2 text-slate-950">
-              On-demand Revalidation
-            </h1>
+            <h1 className="heading">On-demand Revalidation</h1>
             <UIButton text="Revalidate the entire path" />
             <Alert className="my-2">
               <AlertTitle>How to use?</AlertTitle>
