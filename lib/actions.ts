@@ -112,17 +112,7 @@ export async function editTodo(formData: FormData) {
     const text = formData.get("input") as string;
     const id = parseInt(inputId) || 0;
 
-    const todo = await prisma.todo.findUnique({
-      where: {
-        id,
-      },
-    });
-
-    if (!todo) {
-      return;
-    }
-
-    await prisma.todo.update({
+    const res = await prisma.todo.update({
       where: {
         id,
       },
@@ -130,6 +120,8 @@ export async function editTodo(formData: FormData) {
         title: text,
       },
     });
+
+    return { res };
   } catch (error) {
     return { error };
   } finally {

@@ -52,7 +52,7 @@ export default function TodosActions({
           <DialogHeader>
             <DialogTitle>Edit Todo</DialogTitle>
           </DialogHeader>
-          <UIForm
+          <form
             action={editTodo}
             onSubmit={handleSubmit}
             className="flex flex-col gap-2"
@@ -76,7 +76,7 @@ export default function TodosActions({
                 text="Save"
               />
             </DialogFooter>
-          </UIForm>
+          </form>
         </DialogContent>
       </Dialog>
     </div>
