@@ -1,6 +1,6 @@
 "use client";
 
-import UIButton from "@/shared/ui/UIButton";
+import UIButton from "../../../shared/ui/UIButton";
 import { useFormStatus } from "react-dom";
 
 export function SubmitBtn() {

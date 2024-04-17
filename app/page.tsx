@@ -1,15 +1,15 @@
-import Todos from "@/features/Todos";
-import Users from "@/features/Users";
-import BaseLayout from "@/layouts/BaseLayout";
-import { revalidateAll } from "@/lib/actions";
-import Container from "@/shared/components/Container";
-import UIButton from "@/shared/ui/UIButton";
+import Todos from "../features/Todos";
+import Users from "../features/Users";
+import BaseLayout from "../layouts/BaseLayout";
+import { revalidateAll } from "../lib/actions";
+import Container from "../shared/components/Container";
+import UIButton from "../shared/ui/UIButton";
 
 import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@/shared/ui/shadcn/ui/alert";
+} from "../shared/ui/shadcn/ui/alert";
 
 export default async function Home() {
   return (

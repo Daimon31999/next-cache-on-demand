@@ -1,5 +1,5 @@
-import { revalidateUsers } from "@/lib/actions";
-import UIButton from "@/shared/ui/UIButton";
+import { revalidateUsers } from "../lib/actions";
+import UIButton from "../shared/ui/UIButton";
 
 async function getUsers() {
   const endpoint = "https://661ac6b465444945d04e7a1a.mockapi.io/blog/users";

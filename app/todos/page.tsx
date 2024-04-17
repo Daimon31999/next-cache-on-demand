@@ -1,7 +1,7 @@
-import BaseLayout from "@/layouts/BaseLayout";
-import Container from "@/shared/components/Container";
-import Todos from "@/features/todos/Todos";
-import { getTodos } from "@/lib/actions";
+import BaseLayout from "../../layouts/BaseLayout";
+import Container from "../../shared/components/Container";
+import Todos from "../../features/todos/Todos";
+import { getTodos } from "../../lib/actions";
 
 export default async function TodosPage() {
   const { todos = [] } = await getTodos();

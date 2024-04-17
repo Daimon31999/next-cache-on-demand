@@ -1,7 +1,7 @@
 "use server";
 
-import prisma from "@/lib/prisma";
-import { sleep } from "@/shared/lib/utils";
+import prisma from "./prisma";
+import { sleep } from "../shared/lib/utils";
 import { revalidatePath, revalidateTag } from "next/cache";
 
 export const revalidateUsers = async () => {

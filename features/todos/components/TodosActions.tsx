@@ -1,16 +1,16 @@
 "use client";
 
-import { deleteTodo, editTodo } from "@/lib/actions";
-import UIButton from "@/shared/ui/UIButton";
-import UIForm from "@/shared/ui/UIForm";
-import UIInput from "@/shared/ui/UIInput";
+import { deleteTodo, editTodo } from "../../../lib/actions";
+import UIButton from "../../../shared/ui/UIButton";
+import UIForm from "../../../shared/ui/UIForm";
+import UIInput from "../../../shared/ui/UIInput";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogFooter,
   DialogTitle,
-} from "@/shared/ui/shadcn/ui/dialog";
+} from "../../../shared/ui/shadcn/ui/dialog";
 import { useState } from "react";
 
 export default function TodosActions({
